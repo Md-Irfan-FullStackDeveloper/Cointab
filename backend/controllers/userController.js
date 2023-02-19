@@ -29,7 +29,7 @@ const getAllUsers = async (req, res) => {
 
   try {
     users = await User.find(query).skip(skip).limit(queryLimit);
-    let temp = await User.find(query)
+    let temp = await User.find()
     totalpage = Math.ceil(temp.length / 10);
   } catch (error) {
     return res.status(400).json(error.message);
