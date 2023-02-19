@@ -23,16 +23,16 @@ const UserDetails = () => {
       {
         params: {
           gender: gender,
-          "location.city": city,
-          "location.state": state,
-          "location.country": country,
+          city: city,
+          state: state,
+          country: country,
           page: page,
         },
       }
     );
-
-    setUserData(data);
-    setTotalpage(Math.floor(data.length / 10));
+   
+    setUserData(data.users);
+    setTotalpage(data.totalpage);
   };
 
   function buttons() {
